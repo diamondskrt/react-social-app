@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%; 
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 214.3 31.8% 91.4%;
+
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 0 0% 15%;
+    --foreground: 210 40% 98%;
+
+    --accent: 0, 0%, 20%;
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --card: 0 0% 15%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 0, 0%, 15%;
+    --popover-foreground: 210 40% 98%;
+
+    --border: 0, 0%, 49%;
+    --input: 0, 0%, 49%;
+    --ring: 0, 0%, 49%;
+  }
+
+  .bg-background {
+    background: hsl(var(--background))
+  }
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: hsl(var(--border));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-size: 14px;
+}
+
+a.disabled {
+  @apply opacity-40 pointer-events-none
+}
+
+h1, .text-h1 {
+  @apply text-6xl
+}
+
+h2, .text-h2 {
+  @apply text-5xl
+}
+
+h3, .text-h3 {
+  @apply text-4xl
+}
+
+h5, .text-h5 {
+  @apply text-3xl
+}
+
+.text-subtitle {
+  @apply text-xl
+}
